@@ -1,7 +1,7 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
 from CLI       import konsol, hata_yakala, cikis_yap
-from threading import Thread
+from threading import Thread, active_count
 from threading import enumerate as threads
 from Libs      import get_people, SpotiFucker, ProxyVer
 from random    import choices
@@ -36,11 +36,12 @@ if __name__ == "__main__":
         thread_sayisi = int(konsol.input("[magenta]Thread Count : "))
         print()
 
-        for _ in range(thread_sayisi):
-            Thread(target=basla, args=(profile_link,), daemon=False).start()
+        while True:
+            if active_count() <= thread_sayisi:
+                Thread(target=basla, args=(profile_link,), daemon=False).start()
 
-        while len(threads()) - 1:
-            pass
+        # while len(threads()) - 1:
+        #     pass
 
         cikis_yap()
     except Exception as hata:
