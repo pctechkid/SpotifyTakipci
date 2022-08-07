@@ -130,5 +130,5 @@ class SpotiFucker:
                 "ids"  : kullanici_adi
             }
         )
-        print(istek.text)
+
         return istek.status_code == 204
