@@ -34,6 +34,7 @@ if __name__ == "__main__":
     try:
         profile_link  = konsol.input("[yellow]Profile Link : ")
         thread_sayisi = int(konsol.input("[magenta]Thread Count : "))
+        print()
 
         for _ in range(thread_sayisi):
             Thread(target=basla, args=(profile_link,), daemon=False).start()
