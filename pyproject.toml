@@ -5,7 +5,7 @@ description = "Python | Requests » Spotify Takipçi Botu"
 authors = ["keyiflerolsun <keyiflerolsun@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 pip = "^22.2.1"
 setuptools = "^63.2.0"
 wheel = "^0.37.1"
