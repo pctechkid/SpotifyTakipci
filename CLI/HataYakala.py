@@ -19,6 +19,10 @@ def cikis_yap(_print=True):
     if _print:
         print("\n\n")
         print("[bold purple]Çıkış Yapıldı..")
+
+    with suppress(Exception):
+        rmtree("tmp")
+
     bellek_temizle()
     exit()
 
