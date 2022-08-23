@@ -12,7 +12,7 @@ basarili = 0
 def basla(profile_link:str):
     global basarili
 
-    kisi = kisi_ver("tr")
+    kisi = kisi_ver("en")
     # rastgele = "".join(choices(ascii_letters + digits, k=4))
 
     spoti = SpotiFucker(proxy_ver("Settings/PROXY.txt", "requests"))
